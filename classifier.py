@@ -113,4 +113,4 @@ for name, model in models:
 # Accuracy - ratio of correctly predicted observation to the total observations.
 # Precision - (false positives) ratio of correctly predicted positive observations to the total predicted positive observations
 # Recall (Sensitivity) - (false negatives) ratio of correctly predicted positive observations to the all observations in actual class - yes.
-# F1 score - F1 Score is the weighted average of Precision and Recall. Therefore, this score takes both false positives and false
+# F1 score - F1 Score is the weighted average of Precision and Recall.
