@@ -70,15 +70,6 @@ seed = 1
 # split data into training and testing datasets
 X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_size=0.25, random_state=seed)
 
-# import algorithms
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.neural_network import MLPClassifier
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.gaussian_process.kernels import RBF
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.svm import SVC
-from sklearn.metrics import classification_report, accuracy_score
 
 # define scoring method
 scoring = 'accuracy'
@@ -103,7 +94,6 @@ models = zip(names, classifiers)
 results = []
 names = []
 
-"""
 for name, model in models:
     print(name)
     kfold = model_selection.KFold(n_splits=10, random_state = seed)
@@ -112,7 +102,7 @@ for name, model in models:
     names.append(name)
     msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
     print(msg)
-"""
+    
 for name, model in models:
     model.fit(X_train, y_train)
     predictions = model.predict(X_test)
